@@ -8,8 +8,19 @@ def remove_nonletters():
     return 'xxxx'
 
 def cipher(text, shift_amount):
-    return 'aaa'
+    result = []
+    text = text.upper()
+    for char in text:
+        if char.isalpha():
+            shifted = (ord(char) - ord('A') + shift_amount) % 26
+            result.append(chr(ord('A') + shifted))
 
+grouped = []
+for i in range(0, len(result), 5):
+    group = ''.join(result[i:i+5])
+    grouped.append(group)
+
+return ' '.join(grouped)
 def decipher(text, shift_amount):
     return 'aaa'
 
