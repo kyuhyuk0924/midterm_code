@@ -1,7 +1,13 @@
 import re
 
 def get_original_text():
-    return input("Enter the original text: ")
+    filename = input("Enter the file name: ")
+    try:
+        with open(filename, 'r', encoding='utf-8') as f:
+            return f.read()
+    except FileNotFoundError:
+        print("File not found.")
+        exit(1)
 
 def get_shift_amount():
     return int(input("Enter the shift amount: "))
