@@ -46,5 +46,3 @@ if __name__ == '__main__':
     
     deciphered_text = decipher(ciphered_text, shift_amount)
     print(f'Deciphered text: {deciphered_text}')
-
-    
